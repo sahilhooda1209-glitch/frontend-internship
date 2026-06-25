@@ -1,1 +1,207 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    background-color: #121212; /* Dark theme background */
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo left mein aur links right mein */
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #1a1a2e;
+    position: sticky; /* Sticky navbar tabhi kaam karega jab page scroll hoga */
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c084fc; /* Purple accent color */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+/* Hover karne par color badlega */
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+/* Media Query: 600px se chhoti screen par links hide karne ke liye */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+}
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    flex-direction: column;      /* Items ko upar se neeche stack karne ke liye */
+    justify-content: center;     /* Vertically center karne ke liye */
+    align-items: center;         /* Horizontally center karne ke liye */
+    min-height: 100vh;           /* Poori screen ki height lega */
+    background-color: #121212;   
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaa;
+    max-width: 500px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Hero Button Style */
+.hero-btn {
+    display: inline-block;
+    background-color: #c084fc;   /* Purple theme button */
+    color: #121212;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.hero-btn:hover {
+    background-color: #a855f7;
+    transform: translateY(-2px);
+}
+
+/* Media Query: Choti screen par font size adjust karne ke liye */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 32px;         
+    }
+    .hero p {
+        font-size: 16px;
+    }
+}
+/* Skills Section Styles */
+.skills-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #c084fc;
+    margin-bottom: 40px;
+}
+
+/* CSS Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Skill Card */
+.skills-grid .skill-card {
+    background-color: #1a1a2e;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.skills-grid .skill-card h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.skills-grid .skill-card p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Hover Effect */
+.skills-grid .skill-card:hover {
+    border-color: #c084fc;
+    box-shadow: 0 10px 20px rgba(192, 132, 252, 0.15);
+    transform: translateY(-5px);
+}
+/* Projects Section Styles */
+.projects-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Individual Project Card */
+.projects-grid .project-card {
+    background-color: #1a1a2e;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: left; /* Text alignment required */
+    transition: transform 0.3s ease;
+}
+
+.projects-grid .project-card:hover {
+    transform: translateY(-5px);
+}
+
+.projects-grid .project-card h3 {
+    font-size: 22px;
+    color: #c084fc;
+    margin-bottom: 12px;
+}
+
+.projects-grid .project-card p {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Footer Style */
+.footer {
+    background-color: #1a1a2e;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+}
